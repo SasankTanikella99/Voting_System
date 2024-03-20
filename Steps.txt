@@ -1,0 +1,39 @@
+Online Voting Application
+
+WHAT ?
+    -people can vote to election candidates
+
+MODELS?
+- voters
+- candidates
+- admin
+
+ROUTES? (What are the endpoints?)
+ User Authentication
+    /signup - POST - Create new user
+    /login  - GET - login to existing account  {username: id, password: password}
+
+ Voting
+    /candidates - GET - get the list of all candidates
+    /vote/:candidateId - POST - vote for the candidate with id
+
+ Voting Counts
+    /vote/counts - GET - get the list of candidates by their counts
+
+ User Profile
+    /profile - GET - get the user profile
+    /profile/password - PUT - get the user profile password
+
+ Admin Management
+    /candidates : POST - Create new candidates
+    /candidates/:candidateId: PUT - Update existing candidate
+    /candidates/:candidateId: DELETE - Delete existing candidate
+
+APPLICATION
+ - user signup/ signin
+ - candidate list
+ - voting candidates
+ - route that displays live vote results and candidate list
+ - unique id for voters
+ - admin has access to list and cannot vote 
+ - user can login using unique id and password
